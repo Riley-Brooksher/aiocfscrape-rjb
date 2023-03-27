@@ -11,20 +11,20 @@ def get_long_description():
         return f.read()
 
 
-with open(os.path.join(base_path, "cfscrape-rjb", "__init__.py")) as f:
+with open(os.path.join(base_path, "aiocfscraperjb", "__init__.py")) as f:
     VERSION = re.compile(r'.*__version__ = "(.*?)"', re.S).match(f.read()).group(1)
 
 setup(
-    name="cfscrape-rjb",
-    packages=["cfscrape-rjb"],
+    name="aiocfscraperjb",
+    packages=["aiocfscraperjb"],
     version=VERSION,
-    description='A simple Python module to bypass Cloudflare\'s anti-bot page. See https://github.com/Anorov/cloudflare-scrape for more information.',
+    description='A simple async Python module to bypass Cloudflare\'s anti-bot page. Based off of a package by Anorov Vorona https://github.com/Anorov/cloudflare-scrape',
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
     author="Anorov",
     author_email="anorov.vorona@gmail.com",
-    url="https://github.com/Anorov/cloudflare-scrape",
-    keywords=["cloudflare", "scraping"],
+    url="https://github.com/Riley-Brooksher/aiocfscrape-rjb",
+    keywords=["cloudflare", "scraping", "async"],
     include_package_data=True,
-    install_requires=["requests >= 2.23.0"],
+    install_requires=["requests >= 2.23.0", "httpx"],
 )
