@@ -29,7 +29,6 @@ DEFAULT_USER_AGENT = random.choice(USER_AGENTS)
 
 DEFAULT_HEADERS = OrderedDict(
     (
-        ("Host", None),
         ("Connection", "keep-alive"),
         ("Upgrade-Insecure-Requests", "1"),
         ("User-Agent", DEFAULT_USER_AGENT),
