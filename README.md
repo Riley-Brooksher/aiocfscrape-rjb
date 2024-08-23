@@ -1,4 +1,4 @@
-Port of cloudflare-scrape to aio
+Port of cloudflare-scrape to aio, mostly not my own work
 
 cloudflare-scrape
 =================
